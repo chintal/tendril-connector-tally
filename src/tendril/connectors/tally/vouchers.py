@@ -225,7 +225,7 @@ class TallyVoucher(TallyElement):
 
 
 class TallyVouchersList(TallyReport):
-    _cachename = None
+    _cachename = 'TallyVouchersList'
     _header = TallyRequestHeader(1, 'Export', 'Data', 'Voucher Register')
 
     def __init__(self, company_name, dt=None, end_dt=None, filters=None):

@@ -383,7 +383,7 @@ class TallyStockPosition(TallyReport):
         r = etree.Element('DESC')
         sv = etree.SubElement(r, 'STATICVARIABLES')
         self._set_request_staticvariables(sv)
-        self._set_request_date(sv)
+        self._set_request_date(sv, dt=self._dt, end_dt=self._end_dt)
         tdl = etree.SubElement(r, 'TDL')
         tdlmessage = etree.SubElement(tdl, 'TDLMESSAGE')
         collection = etree.SubElement(tdlmessage, 'COLLECTION', ISMODIFY='No',
